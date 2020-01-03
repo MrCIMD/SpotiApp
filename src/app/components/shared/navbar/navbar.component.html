@@ -1,1 +1,9 @@
-<p>navbar works!</p>
+<nav class="blue-grey">
+    <div class="nav-wrapper">
+        <a [routerLink]="['/home']" class="brand-logo">SpotiApp</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a [routerLink]="['/home']">Home</a></li>
+            <li><a [routerLink]="['/search']">Search</a></li>
+        </ul>
+    </div>
+</nav>
