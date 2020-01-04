@@ -1,3 +1,23 @@
+.pt-2 {
+    padding-top: 2rem;
+}
+
+.brand-logo {
+    height: 64px;
+}
+
+.brand-logo img {
+    padding: 0.2rem;
+    width: 4.3rem;
+}
+
+.brand-logo p {
+    display: inline;
+    position: relative;
+    bottom: 1.4rem;
+}
+
+
 /* Animaciones */
 
 .animated {
