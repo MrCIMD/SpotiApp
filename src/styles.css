@@ -1,3 +1,27 @@
+* {
+    box-sizing: border-box !important;
+    -ms-box-sizing: border-box !important;
+    -moz-box-sizing: border-box !important;
+    -webkit-box-sizing: border-box !important;
+}
+
+.badge {
+    margin: 0.1rem !important;
+}
+
+.card {
+    padding-bottom: 0.4rem;
+    overflow: hidden;
+}
+
+.p-1 {
+    padding: 0.4rem 0.1rem;
+}
+
+.badge {
+    overflow: hidden;
+}
+
 .pt-2 {
     padding-top: 2rem;
 }
