@@ -1,16 +1,5 @@
 <section class="animated fadeIn">
     <div class="row">
-        <div class="col s12 m4" *ngFor="let songs of newReleases">
-            <div class="card">
-                <div class="card-image">
-                    <img [src]="songs.images | noimage">
-                    <span class="card-title black-text"><b>{{ songs.name }}</b></span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light light-green"><i class="material-icons black-text">play_arrow</i></a>
-                </div>
-                <div class="card-content">
-                    <span *ngFor="let artist of songs.artists" class="new badge" data-badge-caption="">{{artist.name}}</span>
-                </div>
-            </div>
-        </div>
+        <app-cards [items]="newReleases"></app-cards>
     </div>
 </section>
