@@ -3,7 +3,7 @@
         <div class="col s12 m4" *ngFor="let songs of newReleases">
             <div class="card">
                 <div class="card-image">
-                    <img [src]="songs.images[0].url">
+                    <img [src]="songs.images | noimage">
                     <span class="card-title black-text"><b>{{ songs.name }}</b></span>
                     <a class="btn-floating halfway-fab waves-effect waves-light light-green"><i class="material-icons black-text">play_arrow</i></a>
                 </div>
