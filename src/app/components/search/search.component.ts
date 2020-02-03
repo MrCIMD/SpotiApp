@@ -6,7 +6,7 @@ import { SpotifyService } from '../../services/spotify.service';
   templateUrl: './search.component.html',
   styles: []
 })
-export class SearchComponent{
+export class SearchComponent {
 
   public artists: any[] = [];
   public loading: boolean;
