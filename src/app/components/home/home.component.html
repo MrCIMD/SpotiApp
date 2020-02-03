@@ -1,5 +1,11 @@
 <section class="animated fadeIn fast">
-    <app-preloader *ngIf="loading"></app-preloader>
+    <div class="card-panel red darken-3 animated fadeIn" *ngIf="error.exits">
+        <h4>Error - Algo Exploto.</h4>
+        <pre>
+            {{ error | json }}
+        </pre>
+    </div>
+    <app-preloader *ngIf="loading && !error.exits"></app-preloader>
     <div class="row">
         <app-cards [items]="newReleases"></app-cards>
     </div>
