@@ -1,3 +1,41 @@
 <section class="animated fadeIn">
-    <p>artist works!</p>
+    <app-preloader *ngIf="loading"></app-preloader>
+    <div class="row" *ngIf="!loading">
+        <div class="col m3">
+            <img src="{{artist.images | noimage}}" class="circle responsive-img">
+        </div>
+        <div class="col m7">
+            <h3>{{ artist.name }}</h3>
+            <a [href]="artist.external_urls.spotify" class="white-text" target="_blank">Ir a la página del artista</a>
+        </div>
+        <div class="col m2">
+            <a class="btn-floating waves-effect waves-light red" routerLink="/"><i class="material-icons">arrow_back</i></a>
+        </div>
+        <div class="col m12">
+            <app-preloader *ngIf="loadingList"></app-preloader>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Foto</th>
+                        <th>Album</th>
+                        <th>Nombre</th>
+                        <th>Musica</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr *ngFor="let item of topStracks">
+                        <td style="padding: 0.2rem;">
+                            <img [src]="item.album.images | noimage" class="responsive-img" style="max-width: 50px;">
+                        </td>
+                        <td>{{item.album.name}}</td>
+                        <td>{{item.name}}</td>
+                        <td>
+                            <audio controls [src]="item.preview_url"></audio>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
 </section>

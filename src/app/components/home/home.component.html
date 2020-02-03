@@ -1,4 +1,5 @@
-<section class="animated fadeIn">
+<section class="animated fadeIn fast">
+    <app-preloader *ngIf="loading"></app-preloader>
     <div class="row">
         <app-cards [items]="newReleases"></app-cards>
     </div>

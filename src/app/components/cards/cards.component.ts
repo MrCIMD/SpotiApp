@@ -1,16 +1,28 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
   templateUrl: './cards.component.html'
 })
-export class CardsComponent implements OnInit {
+export class CardsComponent {
 
   @Input() items: any[] = [];
 
-  constructor() { }
+  constructor(private _router: Router) {}
 
-  ngOnInit() {
+  public goTo(item: any) {
+    switch (item.type) {
+      case 'album':
+        this._router.navigate(['/artist/', item.artists[0].id]);
+        break;
+      case 'artist':
+        this._router.navigate(['/artist/', item.id]);
+        break;
+      default:
+        console.log('Sin Tipo - Valio');
+        break;
+    }
   }
 
 }

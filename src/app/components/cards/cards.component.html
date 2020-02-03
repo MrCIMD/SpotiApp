@@ -1,12 +1,11 @@
-<div class="col s12 m4" *ngFor="let item of items">
+<div class="col m4" *ngFor="let item of items">
     <div class="card">
         <div class="card-image">
-            <img [src]="item.images | noimage">
-            <span class="card-title black-text"><b>{{ item.name }}</b></span>
-            <a class="btn-floating halfway-fab waves-effect waves-light light-green"><i class="material-icons black-text">play_arrow</i></a>
+            <img [src]="item.images | noimage" class="puntero" (click)="goTo(item)">
         </div>
         <div class="card-content">
-            <span *ngFor="let artist of item.artists" class="new badge" data-badge-caption="">{{item.name}}</span>
+            <span class="puntero black-text" (click)="goTo(item)">{{ item.name }}</span>
+            <span *ngFor="let artist of item.artists" class="new badge puntero" (click)="goTo(item)" data-badge-caption="">{{item.name}}</span>
         </div>
     </div>
 </div>

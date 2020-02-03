@@ -5,6 +5,7 @@
             <label for="search">Buscar:</label>
         </div>
     </div>
+    <app-preloader *ngIf="loading"></app-preloader>
     <div class="row">
         <app-cards [items]="artists"></app-cards>
     </div>

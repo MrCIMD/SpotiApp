@@ -16,6 +16,7 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { ROUTES } from './app.routes';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { CardsComponent } from './components/cards/cards.component';
+import { PreloaderComponent } from './components/shared/preloader/preloader.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CardsComponent } from './components/cards/cards.component';
     ArtistComponent,
     NavbarComponent,
     NoimagePipe,
-    CardsComponent
+    CardsComponent,
+    PreloaderComponent
   ],
   imports: [
     BrowserModule,
